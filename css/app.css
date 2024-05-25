@@ -1,0 +1,473 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --primary: #FFB3C6;
+    --hovered: #FF8EAA;
+    --secondary: #D4B8A8;
+    --secondary-100: #F6F0EC; /* update_at: 22/05/24 00:02 */
+    --secondary-200: #E3D1C6; /* update_at: 22/05/24 00:02 */
+    --secondary-300: #D0B2A0; /* update_at: 22/05/24 00:02 */
+    --success: #198754;
+    --danger: #DC3545;
+    --warning: #FFC107;
+    --info: #0DCAF0;
+    --light: #F8F9FA;
+    --dark: #0D0708;
+    --border: #DEE2E6;
+    --bg: #FDFCFC;
+    --bgPink: #FFF6F9;
+    --accent: #C2A886;
+
+    --textColor: #0A0708;
+    --text-white: #FFFFFF; /* updated_at : 24/05/24 00.08 */
+
+    /* --gradient: #198754; */
+    --accent1: #A4D1E5;
+    --accent2: #F8DDC4;
+}
+
+
+body {
+    background-color: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--textColor);
+}
+
+nav .active {
+    font-weight: bold;
+}
+
+.dropdown {
+    background-color: var(--bg);
+}
+
+.dropdown-item:hover {
+    background-color: var(--bgPink);
+}
+
+.top-feature {
+    background-image: url('/img/bg-top-feature.png');
+    background-color: var(--bgPink);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 210px;
+}
+
+
+.card-artikel {
+    background-color: var(--secondary);
+    font-size: 11px;
+}
+
+.card-artikel:nth-child(1) {
+    border-radius: 12px 0 0 0;
+}
+
+.card-artikel:nth-child(2) {
+    border-radius: 0 12px 0 0;
+}
+
+.card-artikel:nth-last-child(2) {
+    border-radius: 0 0 0 12px;
+}
+
+.card-artikel h5 {
+    font-size: 22px;
+}
+
+.card {
+    border-color: var(--border);
+}
+
+.feature-card {
+    height: 160px;
+    text-decoration: none;
+}
+
+.feature-card:hover {
+    background-color: var(--bgPink);
+    transition: 0.3s;
+}
+
+
+.circle-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.top-feature .icon-circle {
+    background-color: #E8DBDE;
+}
+
+.circle-image .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E8DBDE;
+}
+
+.circle-image .icon-circle:hover {
+    background-color: var(--bgPink);
+    transition: 0.3s;
+}
+
+
+.sosmed-circle {
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed-circle:hover,
+.sosmed-circle img:hover {
+    border-color: var(--hovered);
+    color: var(--hovered);
+    fill: var(--hovered);
+}
+
+.top-feature .icon-circle img {
+    margin-top: 15px;
+}
+
+.news-category .active,
+.news-category .btn:hover {
+    background-color: var(--secondary-200);
+    /* updated_at: 21/05/24 */
+    /* font-weight: bold; */
+    /* updated_at: 21/05/24 */
+    border: none;
+}
+
+.news-item {
+    text-decoration: none;
+    color: var(--textColor);
+    cursor: pointer;
+    align-self: center;
+}
+
+.mt-5 {
+    margin-top: 40px !important;
+}
+
+.my-5 {
+    margin: 40px 0 40px 0 !important;
+}
+
+.mb-5 {
+    margin-bottom: 40px !important;
+}
+
+.pb-5 {
+    padding-bottom: 40px !important;
+}
+
+.pt-5 {
+    padding-top: 40px !important;
+}
+
+.py-5 {
+    padding: 40px 0 40px 0 !important;
+}
+
+.w-100px {
+    width: 100px !important;
+}
+
+.gap-40px {
+    gap: 40px !important;
+}
+
+.news-item:hover {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.info {
+    background-image: url('/img/bg-info.png');
+    background-position: center;
+    background-size: 100% 100%;
+    /* updated_at: 21/05/2024 */
+    background-repeat: no-repeat;
+}
+
+.informasi-terkini {
+    background-image: url('/img/bg-informasi-terkini.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.header-artikel-kesehatan {
+    background-image: url('/img/bg-artikel-pendidikan-kesehatan.png');
+    background-position: 90% 100%;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
+.carousel-terkini {
+    background-image: url('/img/bg-carousel-terkini.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.artikel-body ul li:not(p) {
+    font-weight: 500;
+}
+
+.hover-bg-pink:hover {
+    background-color: var(--bgPink) !important;
+    transition: 0.3s;
+}
+
+.hover-bg-primary:hover {
+    background-color: var(--primary) !important;
+    transition: 0.3s;
+}
+
+.btn {
+    border: none;
+    ;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+/* HOVER THING */
+.hover-bg-pink:hover {
+    background-color: var(--bgPink);
+    transition: 0.3s;
+}
+
+/* END */
+
+
+.bg-bg {
+    background-color: var(--bgPink) !important;
+}
+
+.bg-accent1 {
+    background-color: var(--accent1) !important;
+}
+
+.bg-accent2 {
+    background-color: var(--accent2) !important;
+}
+
+.text-black {
+    color: var(--textColor);
+}
+
+.btn-primary {
+    background-color: var(--primary) !important; /* updated_at : 24/05/24 00.08 */
+    color: var(--textColor) !important; /* updated_at : 24/05/24 00.08 */
+}
+
+.btn-primary:hover {
+    background-color: var(--hovered) !important; /* updated_at : 24/05/24 00.08 */
+    color: var(--textColor) !important; /* updated_at : 24/05/24 00.08 */
+}
+
+footer hr {
+    border-color: var(--primary) !important; /* updated_at : 24/05/24 00.08 */
+    border-width: 2px;
+}
+
+/* update_at: 22/05/24 00:02 */
+a.card {
+    text-decoration: none;
+}
+
+.carousel-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.z-99{
+    z-index: 99;
+}
+
+.bg-secondary-100 {
+    background-color: var(--secondary-100) !important; /* updated_at : 24/05/24 00.08 */
+}
+.bg-secondary-200 {
+    background-color: var(--secondary-200) !important; /* updated_at : 24/05/24 00.08 */
+}
+.bg-secondary-300 {
+    background-color: var(--secondary-300) !important; /* updated_at : 24/05/24 00.08 */
+}
+
+.header-acara-kesehatan {
+    background-image: url('/img/bg-acara-kesehatan.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.quote-text{
+    font-size: 18px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-300) !important; /* updated_at : 24/05/24 00.08 */
+    color: var(--textColor) !important; /* updated_at : 24/05/24 00.08 */
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-200) !important; /* updated_at : 24/05/24 00.08 */
+    color: var(--text-white) !important; /* updated_at : 24/05/24 00.08 */
+}
+
+/* updated_at : 24/05/24 00.08 */
+
+.bg-body {
+    background-color: var(--bg) !important;
+}
+
+input {
+    background-color: var(--bg) !important;
+}
+
+section {
+    background-color: var(--bg) !important;
+}
+
+.border-start-none{
+    border-left: none !important;
+    /* border: none !important; */
+}
+
+.border-end-none{
+    border-right: none !important;
+}
+
+#pass-eye{
+    cursor: pointer;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.header-ahli-gizi {
+    background-image: url('/img/bg-Header-Informasi-Ahli-Gizi.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 210px !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+.card-ahli-gizi{
+    border-radius: 0 0 20px 20px;
+    padding: 30px;
+    background-color: var(--secondary-100);
+    border-top: 2px solid var(--accent);
+    box-shadow:  0 8px 16px rgba(0,0,0, .175);
+    height: 250px;
+}
+
+.find-ahli-gizi{
+    background-image: url('/img/bg-Cari-Informasi-Ahli-Gizi.png');
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 540px; */
+}
+
+h2{
+    font-size: 30px !important;
+}
+
+.py-80px {
+    padding: 80px 0 80px 0 !important;
+}
+
+.border-hero-konsul{
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: 636px;
+    height: 424px;
+    border-color: var(--primary) !important;
+}
+
+div.img-konsul div:nth-child(1){
+    top: -10px !important;
+    right: 8px !important;
+}
+div.img-konsul div:nth-child(2){
+    bottom: -10px !important;
+    left: 8px !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary{
+    border: 2px solid var(--primary);
+    color: var(--textColor);
+}
+
+.btn-outline-primary:hover{
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--textColor);
+}
+
+.p-5 {
+    padding: 40px !important;
+}
+
+a.card:hover {
+    border-color: var(--primary) !important;
+}

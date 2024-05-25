@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="bg-primary py-3">
+        <div class="container">
+            <p class="m-0 text-center fw-light">Tumbuh kembang sehat balita Indonesia adalah prioritas utama kami, kami
+                mengikuti praktik terbaik untuk kebersihan dan kesejahteraan</p>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kalkulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dokter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Forum</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Layanan Lainnya
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn bg-primary" href="#">Masuk/Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="profile py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 card">
+                    <div class="card-body pt-5 h-100 bg-body">
+                        <h5>Clarissa Felicia</h5>
+                        <p class="fw-bold">Status Keanggotaan</p>
+                        <p class="">User</p>
+                        <a href="" class="btn btn-primary">Ubah Profile</a>
+                    </div>
+                </div>
+                <div class="col-8 ps-4">
+                    <h3>Ubah Profil</h3>
+                    <img src="img/balita.png" class="rounded-circle my-5" alt="" width="80px" height="80px">
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <label for="id"><strong>id</strong></label>
+                                <div class="input-group mb-3 mt-2">
+                                    <input type="text" class="form-control" name="id" id="id" disabled value="10">
+                                </div>
+                                <label for="fullName"><strong>Nama Lengkap<span
+                                            class="text-danger">*</span></strong></label>
+                                <div class="input-group mb-3 mt-2">
+                                    <input type="text" class="form-control" name="full_name" id="fullName" required
+                                        value="Clarissa Felicia">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="email"><strong>Alamat Email <span>*</span></strong></label>
+                                <div class="input-group mb-3 mt-2">
+                                    <input type="text" class="form-control" id="email" name="email"
+                                        value="clarissa_felicia@example.com">
+                                </div>
+                                <label for="password"><strong>Password<span
+                                            class="text-danger">*</span></strong></label>
+                                <div class="input-group mb-3 mt-2">
+                                    <input type="password" class="form-control border-end-none" name="password"
+                                        id="password" required value="Clarissa Felicia">
+                                    <div class="input-group-text bg-body border-start-none">
+                                        <i class="fa-regular fa-eye-slash" id="pass-eye"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-4">
+                                <input type="submit" class="btn btn-primary w-full" value="Ubah Profile">
+                                <a href="" class="btn btn-danger w-full">Daftar Sebagai Ahli Gizi Pelita</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const passwordField = document.getElementById("password");
+    const togglePassword = document.querySelector("#pass-eye");
+
+    togglePassword.addEventListener("click", function () {
+        if (passwordField.type === "text") {
+            passwordField.type = "password";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "text";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    });
+</script>
+
+</html>
