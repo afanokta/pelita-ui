@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="bg-primary py-3">
+    <header class="bg-bg py-3">
         <div class="container">
             <p class="m-0 text-center fw-light">Tumbuh kembang sehat balita Indonesia adalah prioritas utama kami, kami
                 mengikuti praktik terbaik untuk kebersihan dan kesejahteraan</p>
@@ -34,13 +34,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link active" aria-current="page" href="/index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/informasi-terkini.html">Informasi Terkini</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kalkulator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dokter</a>
+                        <a class="nav-link" href="/informasi-ahli-gizi.html">Ahli Gizi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Forum</a>
@@ -51,9 +54,15 @@
                             Layanan Lainnya
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Menu Sehat Balita</a></li>
+                            <li><a class="dropdown-item" href="/artikel-pendidikan-kesehatan.html">Artikel Pendidikan
+                                    Kesehatan</a></li>
+                            <li><a class="dropdown-item" href="/lokasi-pelayanan-kesehatan.html">Lokasi Pelayanan
+                                    Kesehatan</a></li>
+                            <li><a class="dropdown-item" href="/program-dan-kebijakan.html">Program dan Kebijakan</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Grafik Gizi Indonesia</a></li>
+                            <li><a class="dropdown-item" href="/acara-kesehatan.html">Acara Kesehatan Balita</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -63,6 +72,7 @@
             </div>
         </div>
     </nav>
+
 
     <section class="profile py-5">
         <div class="container">
@@ -110,7 +120,8 @@
                             </div>
                             <div class="d-flex flex-column gap-4">
                                 <input type="submit" class="btn btn-primary w-full" value="Ubah Profile">
-                                <a href="" class="btn btn-danger w-full">Daftar Sebagai Ahli Gizi Pelita</a>
+                                <button type="button" class="btn btn-danger w-full" data-bs-toggle="modal"
+                                    data-bs-target="#modalAhliGizi">Daftar Sebagai Ahli Gizi Pelita</button>
                             </div>
                         </div>
                     </form>
@@ -118,10 +129,62 @@
             </div>
         </div>
     </section>
+
+    <!-- MODAL DAFTAR AHLI GIZI -->
+    <div class="modal fade" id="modalAhliGizi" tabindex="-1" aria-labelledby="modalAhliGiziLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Daftar Ahli Gizi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Lokasi Pelayanan</span>
+                            <select name="lokasi_pelayanan" class="form-select" id="">
+                                <option value="">Pilih Lokasi</option>
+                                <option value="">RS Hermina Makasar</option>
+                                <option value="">RS Mayapada Bandung</option>
+                                <option value="">RSUP Dr. Hasan Sadikin</option>
+                                <option value="">RS Santosa Bandung Central</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Nomor STR</span>
+                            <input type="text" class="form-control" placeholder="JY00000518498465" aria-label="Nomor STR" name="nomor_str"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Dokumen STR</span>
+                            <input type="file" class="form-control d-none" placeholder="JY00000518498465" aria-label="Dokumen STR" name="dokumen_str"
+                                aria-describedby="basic-addon1" accept="image/png,image/jpg,image/jpeg" id="dokumen_str">
+                                <label for="dokumen_str" class="fs-6 border form-control cursor-pointer" id="dokumentStrId">Pilih Berkas</label>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Kualifikasi</span>
+                            <input type="text" class="form-control" placeholder="Dokter Spesialis Anak"
+                                aria-label="kualifikasi" aria-describedby="basic-addon1" name="kualifikasi">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Nomor HP</span>
+                            <input type="number" class="form-control" placeholder="081234567890" aria-label="Nomor HP" name="nomor_hp"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END OF MODAL -->
 </body>
 <script>
     const passwordField = document.getElementById("password");
     const togglePassword = document.querySelector("#pass-eye");
+    const dokumentStr = document.getElementById("dokumen_str")
 
     togglePassword.addEventListener("click", function () {
         if (passwordField.type === "text") {
@@ -134,6 +197,13 @@
             togglePassword.classList.add("fa-eye");
         }
     });
+
+    dokumentStr.onchange = function () {
+        const label = document.getElementById("dokumentStrId")
+        const fileName = this.files[0].name
+        label.innerText = fileName
+    }
+
 </script>
 
 </html>
