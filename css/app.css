@@ -28,6 +28,7 @@
     /* --gradient: #198754; */
     --accent1: #A4D1E5;
     --accent2: #F8DDC4;
+    --gray-200: #E9ECEF;
 }
 
 
@@ -506,4 +507,38 @@ a.card:hover {
         bottom: 20px !important;
         left: 8px !important;
     }
+}
+
+/* updated_at : 31/05/2024 */
+
+.header-lokasi-kesehatan {
+    background-image: url('/img/bg-lokasi-pelayanan-kesehatan.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-filter-lokasi select{
+    border: 2px solid var(--primary);
+    color: var(--textColor);
+}
+
+.form-select{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>') !important;
+}
+
+.form-filter-lokasi select option:checked{
+    background-color: var(--bgPink) !important;
+}
+
+.form-filter-lokasi select option:hover {
+    background-color: var(--bgPink) !important;
+}
+
+.bg-gray-200{
+    background-color: var(--gray-200) !important;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
 }
