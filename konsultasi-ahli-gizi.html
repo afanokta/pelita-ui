@@ -13,6 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css">
     <title>Document</title>
 </head>
 
@@ -97,13 +99,47 @@
                 </div>
                 <div class="col-7">
                     <div class="container py-5 d-flex justify-content-center align-items-center">
-                            <div class="rounded-4 bg-secondary-100 w-75 p-5">
-                                <img src="img/berita-1.png" class="rounded-3 img-fluid mb-5" alt="">
-                                <h3 class="mb-2">Dr. Lingga Pradipta Sp.A</h3>
-                                <p class="quote-text mb-2">Sp. Anak</p>
-                                <p>RS Hermina Makassar</p>
-                                <a href="" class="btn btn-secondary text-white w-100 text-center mt-5"><i class="fs-5 fa-brands fa-whatsapp me-2"></i>Jadwalkan Konsultasi</a>
+                        <div class="rounded-4 bg-secondary-100 w-75 p-5">
+                            <img src="img/berita-1.png" class="rounded-3 img-fluid mb-5" alt="">
+                            <h3 class="mb-2">Dr. Lingga Pradipta Sp.A</h3>
+                            <p class="quote-text mb-2">Sp. Anak</p>
+                            <p>RS Hermina Makassar</p>
+                            <button href="" class="btn btn-secondary text-white w-100 text-center mt-5"
+                                data-bs-toggle="modal" data-bs-target="#modalKonsultasi"><i
+                                    class="fs-5 fa-brands fa-whatsapp me-2"></i>Jadwalkan Konsultasi</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalKonsultasi" tabindex="-1" aria-labelledby="modalKonsultasi"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Permintaan Konsultasi
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form action="">
+                                            <div class="modal-body">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text bg-gray-200" id="basic-addon1">Tanggal</span>
+                                                    <input type="date" class="form-control" placeholder="Tanggal" id="tanggalKonsultasi"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text bg-gray-200" id="basic-addon1">Detail</span>
+                                                    <input type="text" class="form-control" placeholder="Detail Konsultasi"
+                                                        aria-label="detail" aria-describedby="basic-addon1" name="detail">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Ajukan Konsultasi</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- END OF MODAL -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,5 +190,14 @@
         </div>
     </footer>
 </body>
+
+<script type="module">
+    import indo from './js/indo.js'
+    const calendar = new AirDatepicker('#tanggalKonsultasi', {
+    locale: indo,
+    autoClose: true,
+    dateFormat: "yyyy-MM-dd",
+});
+</script>
 
 </html>
